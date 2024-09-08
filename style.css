@@ -1,0 +1,68 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://img.freepik.com/free-vector/gradient-international-day-education-background_23-2151120677.jpg?w=740&t=st=1725782399~exp=1725782999~hmac=c9d4641251b7d11210c67192106b8e544f01fdd948d5256e9fbe49169a595258);
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color:bisque;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 25 25 10px rgba(50, 25, 50, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #282ff5;
+  }
+  
+  #resume h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    color: #007bff;
+  }
+  
+  #resume p {
+    margin: 10px 0;
+  }
+  
+  .editable {
+    display: inline-block;
+    padding: 4px;
+    border: 1px dashed transparent;
+    cursor: pointer;
+    transition: border 0.2s ease;
+  }
+  
+  .editable:hover {
+    border: 1px dashed #de851f;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input {
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
