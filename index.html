@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editable Resume</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Edit Your Resume</h1>
-
-    <div id="resume">
-      <h2>Personal Information</h2>
-      <p><strong>Name:</strong> <span class="editable" id="resume-name">Afsheen Imran</span></p>
-      <p><strong>Email:</strong> <span class="editable" id="resume-email">afsheen6441@gmail.com</span></p>
-      <p><strong>Phone:</strong> <span class="editable" id="resume-phone">03366861922</span></p>
-
-      <h2>Education</h2>
-      <p class="editable" id="resume-education">Masters in Microbiology</p>
-
-      <h2>Experience</h2>
-      <p class="editable" id="resume-experience">3 years working experience as freelancer</p>
-
-      <h2>Skills</h2>
-      <p class="editable" id="resume-skills">JavaScript, TypeScript, React, Next.js</p>
-
-      <button id="edit-resume">Edit</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <strong>Editable Resume Builder</strong>
     </div>
-  </div>
+    <div class="mainn">
+      <form id="resumeForm">
+        <div class="personal"><strong>Personal Information</strong></div>
 
-  <script src="script.js"></script>
-</body>
+        <label class="inputname" id="upload" for="picture"><strong>Upload Picture:</strong></label>
+        <input
+          class="forpic"
+          type="file"
+          id="picture"
+          name="picture"
+          accept="image/*"
+          required
+        /><br /><br />
+
+        <label class="inputname" for="name"><strong>Name:</strong></label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label class="inputname" for="phone"><strong>Phone Number:</strong></label>
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+
+        <label class="inputname" for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label class="inputname" for="address"><strong>Address:</strong></label>
+        <textarea id="address" name="address" required></textarea><br /><br />
+
+        <div class="personal"><strong>Skills</strong></div>
+        <input type="text" contenteditable="true" id="skills" name="skills" required /><br />
+        <div id="additionalSkills"></div>
+        <br />
+
+        <div class="personal"><strong>Education</strong></div>
+        <textarea id="education" contenteditable="true" name="education" required></textarea><br />
+        <div id="additionalEducation"></div>
+        <br />
+
+        <div class="personal"><strong>Experience</strong></div>
+        <textarea id="experience" contenteditable="true" name="experience" required></textarea><br />
+        <div id="additionalExperience"></div>
+        <br />
+      </form>
+      <button id="generateBtn" class="inputname" type="submit">
+        Generate Resume
+      </button>
+    </div>
+
+    <h1>
+      After generating the resume, you can add additional skills, education, and experience by clicking the button and filling in the respective sections.
+    </h1>
+    <div id="generatedResume"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

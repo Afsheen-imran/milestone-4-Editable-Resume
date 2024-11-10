@@ -1,68 +1,180 @@
-/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(https://img.freepik.com/free-vector/gradient-international-day-education-background_23-2151120677.jpg?w=740&t=st=1725782399~exp=1725782999~hmac=c9d4641251b7d11210c67192106b8e544f01fdd948d5256e9fbe49169a595258);
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #000000;
+  background-image: 
+    linear-gradient(to bottom right, #ffffff, #002fff);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+.heading {
+  color: #0b29d3;
+  font-size: xx-large;
+  text-align: center;
+  margin: 30px 0;
+  animation: slideInFromLeft 0.7s ease-out forwards;
+}
+
+.mainn {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 4px 12px rgba(0, 191, 255, 0.4);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.mainn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.02);
+}
+
+.personal {
+  color: #00e5ff;
+  background-color: rgba(0, 0, 32, 0.7);
+  text-align: center;
+  padding: 12px;
+  font-size: x-large;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.personal:hover {
+  background-color: rgba(0, 0, 64, 0.85);
+}
+
+input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  background-color: rgba(0, 191, 255, 0.1);
+  border-radius: 30px;
+  border: 2px solid #2009ec;
+  margin-top: 20px;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+input[type="file"]:hover {
+  background-color: rgba(0, 191, 255, 0.2);
+  border: 2px solid #0d0ab4;
+}
+
+button {
+  cursor: pointer;
+  font-size: large;
+  color: #ffffff;
+  background-color:  #1b5dce;
+  border: 2px solid #02363d;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #12474e;
+  transform: translateY(-2px);
+}
+
+input[type="submit"] {
+  border-radius: 30px;
+  background-color:#1b5dce;
+  color: white;
+  font-size: x-large;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #3f07db;
+}
+
+#resume-contect {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #0f1bc4;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #020522;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+#resume-contect:hover {
+  border-color: #096d7a;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+h2,
+p {
+  margin: 10px 0;
+  color: #007acc;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: small;
+  text-align: center;
+}
+
+img {
+  max-width: 150px;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
   }
-  
-  .container {
-    width: 80%;
-    max-width: 800px;
-    margin: 40px auto;
-    background-color:bisque;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 25 25 10px rgba(50, 25, 50, 0.1);
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  h1 {
-    text-align: center;
-    color: #282ff5;
+}
+
+.slide-from-left {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.animated-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slide-up 0.5s ease forwards;
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  #resume h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    color: #007bff;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
   }
-  
-  #resume p {
-    margin: 10px 0;
+  form,
+  #resume {
+    padding: 15px;
   }
-  
-  .editable {
-    display: inline-block;
-    padding: 4px;
-    border: 1px dashed transparent;
-    cursor: pointer;
-    transition: border 0.2s ease;
-  }
-  
-  .editable:hover {
-    border: 1px dashed #de851f;
-  }
-  
-  button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  input {
-    border: 1px solid #ccc;
-    padding: 4px;
+  input,
+  textarea {
     font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
   }
-  
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1em;
+  }
+  img {
+    max-width: 100px;
+  }
+}
